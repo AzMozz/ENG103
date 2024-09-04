@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LED Control</title>
-</head>
-<body>
-    <h1>Control the LED</h1>
-    <p>{{ message }}</p>
-    <form action="/led/on" method="get">
-        <button type="submit">Turn LED ON</button>
+  </head>
+  <body>
+    <h1>Control Your Lights</h1>
+
+    <!-- Bedroom Light Control (GPIO17) -->
+    <form action="/led/17/on" method="get">
+      <button type="submit">Turn Bedroom Light ON</button>
     </form>
-    <form action="/led/off" method="get">
-        <button type="submit">Turn LED OFF</button>
+    <form action="/led/17/off" method="get">
+      <button type="submit">Turn Bedroom Light OFF</button>
     </form>
-</body>
+
+    <!-- Living Room Light Control (GPIO26) -->
+    <form action="/led/26/on" method="get">
+      <button type="submit">Turn Living Room Light ON</button>
+    </form>
+    <form action="/led/26/off" method="get">
+      <button type="submit">Turn Living Room Light OFF</button>
+    </form>
+
+    <!-- Kitchen Light Control (GPIO16) -->
+    <form action="/led/16/on" method="get">
+      <button type="submit">Turn Kitchen Light ON</button>
+    </form>
+    <form action="/led/16/off" method="get">
+      <button type="submit">Turn Kitchen Light OFF</button>
+    </form>
+  </body>
 </html>
